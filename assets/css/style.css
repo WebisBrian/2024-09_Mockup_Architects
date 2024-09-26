@@ -1,0 +1,294 @@
+@font-face {
+    font-family: 'Segoeui';
+    src: url(../font/SEGOEUI.TTF);
+}
+@keyframes h1-appear {
+    0% {
+        scale: 50%;
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    100% {
+        scale: 100%;
+        opacity: 1;
+    }
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoeui', serif;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+/* HEADER */
+
+header {
+    height: 30vh;
+    width: 100vw;
+    padding-bottom: 60px;
+}
+
+#check-logo {
+    display: none;
+}
+
+#menu {
+    width: 100%;
+    height: 7.5vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(252, 252, 252, 0.8);
+    padding: 15px;
+    letter-spacing: 2px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 500;
+}
+
+#logo span {
+    font-weight: 600;
+}
+
+#flex-menu {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    transform: translateX(-103vw);
+    transition: all 0.3s;
+    z-index: 1000;
+    background-color: rgba(230, 219, 206, 0.8);
+    font-weight: 900;
+    font-size: 30px;
+}
+
+#check-logo:checked~#flex-menu {
+    transform: translateX(-2vh);
+}
+
+#flex-menu div {
+    margin-right: 50px;
+}
+
+#flex-menu a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    background-color: green;
+}
+
+#img-menu {
+    margin-top: 7.5vh;
+    height: 100%;
+    background-image: url(../img/architect.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    animation-name: h1-appear;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+
+}
+
+h1 #h1-logo {
+    font-size: 1.5em;
+    background-color: hsla(0, 0%, 0%, 65%);
+    color: rgb(228, 226, 226);
+    padding: 10px 30px;
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.75);
+
+}
+
+/*  SECTION PROJET  */
+
+main {
+    width: 90vw;
+    margin: auto;
+}
+
+h2 {
+    font-weight: 400;
+    border-bottom: 1px solid rgb(243, 239, 239);
+    padding: 15px 0;
+    margin: 20px 0 15px 0;
+}
+
+#projects-gallery {
+    
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Chaque element en position absolute doit avoir pour son origine (top, left, bottom, etc...) un parent en position relative  */
+
+#projects-gallery div {
+    position: relative;
+    margin-bottom: 2vh;
+    width: 100%;
+}
+
+#projects-gallery p {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px 15px;
+    font-weight: 400;
+}
+
+#house-of-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 30px 0 0 0;
+}
+
+.card img {
+    filter: grayscale(70%);
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 24px;
+    margin: 15px 0 15px 0;
+}
+
+h4 {
+    color: rgb(180, 180, 180);
+    font-weight: 500;
+    margin: 0 0 20px 0;
+}
+
+.contact-btn {
+    text-align: center;
+    background-color: rgb(243, 239, 239);
+    padding: 7px 0;
+    margin: 15px 0 0 0;
+    cursor: pointer;
+    /* animation-name: degrade-btn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1; */
+}
+
+/* .contact-btn:hover {
+    animation-name: degrade-btn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+ */
+
+.Contact-form input { 
+    width: 100%;
+    padding: 5px;
+    margin: 15px 0;
+    border: none;
+    border: rgb(243, 239, 239) 1px solid;
+    color: rgb(180, 180, 180);
+}
+
+#Submit-btn input {
+    color: white;
+    padding: 5px 10px;
+    margin: 10px 0 20px 0;
+    background-color: black;
+    border: none;
+}
+
+#Contact img {
+    margin: 20px 0;
+}
+
+footer {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+footer p {
+    margin-bottom: 5vh;
+}
+
+/* MEDIA QUERIES */
+/* Les medias queries sont utilisés en fin de css IMPERATIVEMENT et doivent être par ordre de taille d'écran croissant */
+
+@media screen and (max-width: 600px) {
+    .element-masque {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+    #projects-gallery,
+    #house-of-cards {
+        justify-content: space-around;
+    }
+    #projects-gallery div,
+    .card {
+        width: 49%;
+    }
+    header {
+        height: 500px;
+    }
+    #flex-menu {
+        flex-direction: row;
+        width: fit-content;
+        position: static;
+        height: fit-content;
+        transform: translateX(-1.5vw);
+        background-color: white;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #projects-gallery,
+    #house-of-cards {
+        justify-content: space-around;
+    }
+    #projects-gallery div,
+    .card {
+        width: 24%;
+    }
+    header {
+        height: 500px;
+    }
+}
+
