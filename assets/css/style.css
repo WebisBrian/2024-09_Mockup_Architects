@@ -2,12 +2,14 @@
     font-family: 'Segoeui';
     src: url(../font/SEGOEUI.TTF);
 }
+
 @keyframes h1-appear {
     0% {
         scale: 50%;
         opacity: 0;
         transform: translateY(80px);
     }
+
     100% {
         scale: 100%;
         opacity: 1;
@@ -140,13 +142,11 @@ h2 {
 }
 
 #projects-gallery {
-    
+
     margin-top: 35px;
     display: flex;
     flex-wrap: wrap;
 }
-
-/* Chaque element en position absolute doit avoir pour son origine (top, left, bottom, etc...) un parent en position relative  */
 
 #projects-gallery div {
     position: relative;
@@ -195,21 +195,9 @@ h4 {
     padding: 7px 0;
     margin: 15px 0 0 0;
     cursor: pointer;
-    /* animation-name: degrade-btn;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1; */
 }
 
-/* .contact-btn:hover {
-    animation-name: degrade-btn;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-}
- */
-
-.Contact-form input { 
+.Contact-form input {
     width: 100%;
     padding: 5px;
     margin: 15px 0;
@@ -245,7 +233,6 @@ footer p {
 }
 
 /* MEDIA QUERIES */
-/* Les medias queries sont utilisés en fin de css IMPERATIVEMENT et doivent être par ordre de taille d'écran croissant */
 
 @media screen and (max-width: 600px) {
     .element-masque {
@@ -255,17 +242,21 @@ footer p {
 }
 
 @media screen and (min-width: 600px) {
+
     #projects-gallery,
     #house-of-cards {
         justify-content: space-around;
     }
+
     #projects-gallery div,
     .card {
         width: 49%;
     }
+
     header {
         height: 500px;
     }
+
     #flex-menu {
         flex-direction: row;
         width: fit-content;
@@ -279,16 +270,18 @@ footer p {
 }
 
 @media screen and (min-width: 1024px) {
+
     #projects-gallery,
     #house-of-cards {
         justify-content: space-around;
     }
+
     #projects-gallery div,
     .card {
         width: 24%;
     }
+
     header {
         height: 500px;
     }
 }
-
